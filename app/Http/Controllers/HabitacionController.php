@@ -12,8 +12,9 @@ class HabitacionController extends Controller
     {
 
         $habitacion = Habitacion::all();
+        $hoverBlue = 1;
 
-        return view('habitacion.index', compact('habitacion'));
+        return view('habitacion.index', compact('habitacion','hoverBlue'));
     }
 
     public function create()

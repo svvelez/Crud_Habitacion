@@ -26,20 +26,33 @@
     <tbody>
        @foreach ($habitacion as $row)
 
-    <tr class="bg-blue-100 lg:text-black">
+
+    <tr class=" {{ ($hoverBlue%2)==0 ? 'bg-blue-200':'bg-blue-100' }}    lg:text-black  ">
         <input type="hidden" class="serdelete_val_id" value="{{$row->id}}">
   {{--       <td class="p-3">{{$row->id}}</td> --}}
-        <td class="p-3 font-medium capitalize">{{$row->nombre}}</td>
+        <td class="p-3 font-medium capitalize ">{{$row->nombre}}</td>
         <td class="p-3">{{$row->tipo}}</td>
         <td class="p-3">{{$row->cantidad}}</td>
-        <td class="p-3">{{$row->precio}}</td>
-        <td class="p-3">{{$row->estado}}</td>
+        <td class="p-3">${{$row->precio}}</td>
+        <td class="p-3"><span class="text-white py-1 px-3 rounded-full text-xs font-bold
+
+            @php
+                if($row->estado=='Disponible'){
+                    echo('bg-purple-400');
+                }
+
+                if($row->estado=='ocupada'){
+                    echo('bg-green-400');
+                }
+            @endphp
+
+           ">{{strtoupper($row->estado)}}</span></td>
         <td class="p-3 flex justify-center">
 
             <form action="{{ route('habitacion.destroy',$row->id)}}" class="d-inline formulario-eliminar" method="post">
                @method('DELETE')
                 @csrf
-                <button type="submit" class="text-red-600 hover:text-red-400 mx-2"><i class="fas fa-solid fa-trash"></i></button>
+                <button type="submit" class="text-red-500 hover:text-red-400 mx-2"><i class="fas fa-solid fa-trash"></i></button>
             </form>
 
             <a href="{{ route('habitacion.edit',$row->id) }}" class="text-blue-700 hover:text-blue-400 mx-2">
@@ -48,6 +61,9 @@
 
         </td>
     </tr>
+
+        @php(  $hoverBlue++ )
+
 
       @endforeach
 
