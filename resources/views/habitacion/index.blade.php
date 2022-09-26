@@ -5,7 +5,7 @@
 @section('content')
 <link rel="stylesheet" href="style.css">
 
-<div class="overflow-auto rounded-lg shadow">
+<div class="overflow-auto rounded-lg shadow" style="width: 100%">
     <div class="col-span-12">
       <div class="overflow-auto lg:overflow-visible">
           <div class="text-center flex-auto">

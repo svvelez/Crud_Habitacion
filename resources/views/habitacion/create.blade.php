@@ -4,7 +4,7 @@
 
 @section('content')
     <form action="{{route('habitacion.store')}}" id="formulario_enviar" method="POST"
-          class="bg-white w-1/3 p-4 border-gray-100 shadow-xl rounded-lg">
+          class="bg-white w-1/3 p-4 border-gray-100 shadow-xl rounded-lg" style="width: 50%">
         <h1 class="text-xl mb-2">Registrar Habitación</h1>
         @csrf
 
@@ -48,8 +48,20 @@ text-red-500 p-2 my-2">* {{$message}}</p>
         @enderror
 
 
+       {{--  <div class="mb-3">
+            <label for="archivo" class="form-label">Archivo*</label> --}}
+            <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300" name="archivo" type="file" id="archivo">
+       {{--  </div> --}}
+
+        @error('archivo')
+        <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-500 p-2 my-2">
+            * {{$message}}</p>
+        @enderror
+
         <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
         placeholder="Estado" name="estado" id="estado">
+
+
 
 
  @error('estado')
