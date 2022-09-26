@@ -61,7 +61,7 @@ text-red-500 p-2 my-2">* {{$message}}</p>
         <select class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
         placeholder="Estado" name="estado" id="estado">
         <option selected>Estado</option>
-        <option value="disponible">Disponible</option>
+        <option value="Disponible">Disponible</option>
         <option value="ocupada">Ocupada</option>
 
         </select>
