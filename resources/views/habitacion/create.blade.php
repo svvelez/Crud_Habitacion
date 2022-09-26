@@ -50,16 +50,21 @@ text-red-500 p-2 my-2">* {{$message}}</p>
 
        {{--  <div class="mb-3">
             <label for="archivo" class="form-label">Archivo*</label> --}}
-            <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300" name="archivo" type="file" id="archivo">
-       {{--  </div> --}}
+{{--             <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300" name="archivo" type="file" id="archivo">
+ --}}       {{--  </div> --}}
 
-        @error('archivo')
+     {{--    @error('archivo')
         <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-500 p-2 my-2">
             * {{$message}}</p>
         @enderror
-
-        <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
+ --}}
+        <select class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
         placeholder="Estado" name="estado" id="estado">
+        <option selected>Estado</option>
+        <option value="disponible">Disponible</option>
+        <option value="ocupada">Ocupada</option>
+
+        </select>
 
 
 

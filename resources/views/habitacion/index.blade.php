@@ -61,8 +61,8 @@
 @if(session('eliminar')=='ok')
     <script>
         Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
+            'Eliminado!',
+            'Ha sido eliminado correctamente.',
             'success'
         )
     </script>
@@ -73,13 +73,13 @@
     $('.formulario-eliminar').submit(function (e) {
         e.preventDefault();
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Esta seguro de eliminar?',
+            text: "Eliminar esto!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Si, eliminar!'
         }).then((result) => {
             if (result.value) {
                 /*Swal.fire(
