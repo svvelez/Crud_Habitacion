@@ -5,7 +5,7 @@
 @section('content')
     <form action="{{route('habitacion.store')}}" id="formulario_enviar" method="POST"
           class="bg-white w-1/3 p-4 border-gray-100 shadow-xl rounded-lg">
-        <h2 class="text-2x1 text-center py-4 mb-4 font-semibold">Registrar Habitación</h2>
+        <h1 class="text-xl mb-2">Registrar Habitación</h1>
         @csrf
 
 
@@ -57,8 +57,8 @@ text-red-500 p-2 my-2">* {{$message}}</p>
  text-red-500 p-2 my-2">* {{$message}}</p>
  @enderror
 
-        <button type="button" id="enviar" class="my-3 w-full bg-green-500 p-2 font-semibold
-rounded text-white hover:bg-green-600">Registrar</button>
+        <button type="button" id="enviar" class="my-3 w-full bg-blue-400 p-2 font-semibold
+rounded text-white hover:bg-blue-600">Registrar</button>
 
 
     </form>

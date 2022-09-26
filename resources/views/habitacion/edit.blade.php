@@ -27,8 +27,8 @@ placeholder="Precio" name="precio" id="precio" value="{{$habit->precio}}">
 <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
 placeholder="Estado" name="estado" id="estado" value="{{$habit->estado}}">
 
-<button type="button" id="enviarr" class="my-3 w-full bg-green-400 p-2 font-semibold
-rounded text-white hover:bg-green-600">Actualizar</button>
+<button type="button" id="enviarr" class="my-3 w-full bg-blue-600 p-2 font-semibold
+rounded text-white hover:bg-blue-400">Actualizar</button>
 
 
 </form>
