@@ -13,6 +13,8 @@ class Habitacion extends Model
 
         'nombre',
         'tipo',
+        'numero_habitacion',
+        'piso',
         'cantidad',
         'precio',
         'estado'

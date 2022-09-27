@@ -14,9 +14,11 @@
     <table class="w-full">
     <thead class="bg-blue-400 border-b-2 border-blue-200 text-white">
       <tr>
-   {{--      <th class="p-3">ID</th> --}}
+
         <th class="p-3   tracking-wide text-center">Nombre</th>
         <th class="p-3  tracking-wide text-center">Tipo</th>
+        <th class="p-3  tracking-wide text-center">N°habitación</th>
+        <th class="p-3  tracking-wide text-center">Piso</th>
         <th class="p-3 tracking-wide text-center">Cantidad</th>
         <th class="p-3  tracking-wide text-center">Precio</th>
         <th class="p-3  tracking-wide text-center">Estado</th>
@@ -32,6 +34,8 @@
   {{--       <td class="p-3">{{$row->id}}</td> --}}
         <td class="p-3 font-medium capitalize ">{{$row->nombre}}</td>
         <td class="p-3">{{$row->tipo}}</td>
+        <td class="p-3">{{$row->numero_habitacion}}</td>
+        <td class="p-3">{{$row->piso}}</td>
         <td class="p-3">{{$row->cantidad}}</td>
         <td class="p-3">${{$row->precio}}</td>
         <td class="p-3"><span class="text-white py-1 px-3 rounded-full text-xs font-bold

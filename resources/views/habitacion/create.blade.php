@@ -26,6 +26,26 @@
         text-red-500 p-2 my-2">* {{$message}}</p>
         @enderror
 
+        <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
+        placeholder="Numero de habitación" name="numero_habitacion" id="numero_habitacion">
+
+
+       @error('numero_habitacion')
+      <p class="border border-red-500 rounded-md bg-red-100 w-full
+       text-red-500 p-2 my-2">* {{$message}}</p>
+      @enderror
+
+      <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
+      placeholder="Piso" name="piso" id="piso">
+
+
+      @error('piso')
+     <p class="border border-red-500 rounded-md bg-red-100 w-full
+     text-red-500 p-2 my-2">* {{$message}}</p>
+     @enderror
+
+
+
 
         <input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
         placeholder="Precio" name="precio" id="precio">

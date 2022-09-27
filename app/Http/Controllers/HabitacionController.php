@@ -29,6 +29,8 @@ class HabitacionController extends Controller
         $habit = Habitacion::create([
             'nombre' => $request->nombre,
             'tipo' => $request->tipo,
+            'numero_habitacion' => $request->numero_habitacion,
+            'piso' => $request->piso,
             'cantidad' => $request->cantidad,
             'precio' => $request->precio,
             'estado' => $request->estado
@@ -58,6 +60,8 @@ class HabitacionController extends Controller
         $habit->update([
             'nombre' => $request->nombre,
             'tipo' => $request->tipo,
+            'numero_habitacion' => $request->numero_habitacion,
+            'piso' => $request->piso,
             'cantidad' => $request->cantidad,
             'precio' => $request->precio,
             'estado' => $request->estado
