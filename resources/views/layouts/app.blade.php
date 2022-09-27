@@ -26,11 +26,13 @@
 <body class="bg-gray-100 text-gray-800">
 <nav class="h-16 flex justify-end py-4 px-16">
 
-    <a href="{{route('habitacion.index')}}" class="border border-blue-600
-  rounded px-4 pt-1 h-10 bg-white text-blue-600 font-semibold mx-2 hover:text-blue-500">Habitaciones</a>
+
+
+    <a href="{{route('habitacion.index')}}" class="border border-sky-500
+  rounded px-4 pt-1 h-10 bg-white text-sky-600 font-semibold mx-2 hover:text-sky-500">Habitaciones</a>
 
     <a href="{{route('habitacion.create')}}" class="text-white rounded px-4 pt-1 h-10
-  bg-blue-400  font-semibold mx-2 hover:bg-blue-700">Registrar</a>
+  bg-sky-400  font-semibold mx-2 hover:bg-sky-600">Registrar</a>
 
 
 </nav>

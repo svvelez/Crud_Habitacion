@@ -83,6 +83,7 @@ text-red-500 p-2 my-2">* {{$message}}</p>
         <option selected>Estado</option>
         <option value="Disponible">Disponible</option>
         <option value="ocupada">Ocupada</option>
+        <option value="limpieza">Limpieza</option>
 
         </select>
 
@@ -94,8 +95,8 @@ text-red-500 p-2 my-2">* {{$message}}</p>
  text-red-500 p-2 my-2">* {{$message}}</p>
  @enderror
 
-        <button type="button" id="enviar" class="my-3 w-full bg-blue-400 p-2 font-semibold
-rounded text-white hover:bg-blue-600">Registrar</button>
+        <button type="button" id="enviar" class="my-3 w-full bg-sky-400 p-2 font-semibold
+rounded text-white hover:bg-sky-600">Registrar</button>
 
 
     </form>

@@ -12,14 +12,14 @@
 
 
     <table class="w-full">
-    <thead class="bg-blue-400 border-b-2 border-blue-200 text-white">
+    <thead class="bg-sky-400 border-b-2 border-sky-200 text-white">
       <tr>
 
         <th class="p-3   tracking-wide text-center">Nombre</th>
         <th class="p-3  tracking-wide text-center">Tipo</th>
         <th class="p-3  tracking-wide text-center">N°habitación</th>
         <th class="p-3  tracking-wide text-center">Piso</th>
-        <th class="p-3 tracking-wide text-center">Cantidad</th>
+        <th class="p-3 tracking-wide text-center">Capacidad</th>
         <th class="p-3  tracking-wide text-center">Precio</th>
         <th class="p-3  tracking-wide text-center">Estado</th>
         <th class="p-3 tracking-wide text-center">Action</th>
@@ -29,9 +29,9 @@
        @foreach ($habitacion as $row)
 
 
-    <tr class=" {{ ($hoverBlue%2)==0 ? 'bg-blue-200':'bg-blue-100' }}    lg:text-black  ">
+    <tr class=" {{ ($hoverBlue%2)==0 ? 'bg-sky-200':'bg-sky-100' }}    lg:text-black  ">
         <input type="hidden" class="serdelete_val_id" value="{{$row->id}}">
-  {{--       <td class="p-3">{{$row->id}}</td> --}}
+
         <td class="p-3 font-medium capitalize ">{{$row->nombre}}</td>
         <td class="p-3">{{$row->tipo}}</td>
         <td class="p-3">{{$row->numero_habitacion}}</td>
@@ -42,11 +42,17 @@
 
             @php
                 if($row->estado=='Disponible'){
-                    echo('bg-purple-400');
+                    echo('bg-green-400');
                 }
 
                 if($row->estado=='ocupada'){
-                    echo('bg-green-400');
+                    echo('bg-purple-400');
+
+                }
+
+                if($row->estado=='limpieza'){
+                    echo('bg-cyan-400');
+
                 }
             @endphp
 

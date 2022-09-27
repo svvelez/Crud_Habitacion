@@ -18,7 +18,7 @@ class CreateHabitacionregisTable extends Migration
             $table->string('nombre');
             $table->string('tipo');
             $table->integer('numero_habitacion');
-            $table->integer('piso');
+            $table->string('piso');
             $table->integer('cantidad');
             $table->integer('precio');
             $table->string('estado');

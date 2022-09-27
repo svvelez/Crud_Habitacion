@@ -56,10 +56,12 @@ placeholder="Estado" name="estado" id="estado" value="{{$habit->estado}}">
            if($habit->estado=='Disponible'){
            echo('<option value="Disponible" selected>Disponible</option>
            <option value="ocupada">Ocupada</option>
+           <option value="limpieza">Limpieza</option>
            ');
            }elseif ($habit->estado=='ocupada') {
             echo('<option value="ocupada" selected>Ocupada</option>
-            <option value="Disponible">Disponible</option>');
+            <option value="Disponible">Disponible</option>
+            <option value="limpieza">Limpieza</option>');
            }
        @endphp
 
