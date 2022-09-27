@@ -8,24 +8,64 @@
 @csrf
 @method('put')
 <h2 class="text-2x1 text-center py-4 mb-4 font-semibold">
-    Editar habitación {{$habit->id}}
+    Editar habitación {{$habit->numero_habitacion}}
 </h2>
 
-
-<input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
+<div>
+<label>Nombre</label>
+<input class="my-2 w-full f-black-800 p-2 text-lg rounded placeholder bg-gray-300"
 placeholder="Nombre" name="nombre" id="nombre" value="{{$habit->nombre}}">
+</div>
 
-<input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
-placeholder="Tipo" name="tipo" id="tipo" value="{{$habit->tipo}}">
+<div>
+    <label>Tipo</label>
+    <input class="my-2 w-full f-gray-800 p-2 text-lg rounded placeholder bg-gray-300"
+    placeholder="Tipo" name="tipo" id="tipo" value="{{$habit->tipo}}">
+</div>
 
-<input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
-placeholder="Cantidad" name="cantidad" id="cantidad" value="{{$habit->cantidad}}">
+<div>
+    <label>N° Habitación</label>
+   <input class="my-2 w-full f-gray-800 p-2 text-lg rounded placeholder bg-gray-300"
+   placeholder="Número de habitación" name="numero_habitacion" id="numero_habitacion" value="{{$habit->numero_habitacion}}">
+</div>
 
-<input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
-placeholder="Precio" name="precio" id="precio" value="{{$habit->precio}}">
+<div>
+    <label>Piso</label>
+    <input class="my-2 w-full f-gray-800 p-2 text-lg rounded placeholder bg-gray-300"
+    placeholder="Piso" name="piso" id="piso" value="{{$habit->piso}}">
+</div>
 
-<input class="my-2 w-full f-gray-200 p-2 text-lg rounded placeholder bg-gray-300"
+<div>
+    <label>Cantidad</label>
+    <input class="my-2 w-full f-gray-800 p-2 text-lg rounded placeholder bg-gray-300"
+    placeholder="Cantidad" name="cantidad" id="cantidad" value="{{$habit->cantidad}}">
+</div>
+
+<div>
+    <label>Precio</label>
+    <input class="my-2 w-full f-gray-800 p-2 text-lg rounded placeholder bg-gray-300"
+    placeholder="Precio" name="precio" id="precio" value="{{$habit->precio}}">
+</div>
+
+<div>
+    <label>Estado</label>
+    <select class="my-2 w-full f-gray-800 p-2 text-lg rounded placeholder bg-gray-300"
 placeholder="Estado" name="estado" id="estado" value="{{$habit->estado}}">
+
+       @php
+           if($habit->estado=='Disponible'){
+           echo('<option value="Disponible" selected>Disponible</option>
+           <option value="ocupada">Ocupada</option>
+           ');
+           }elseif ($habit->estado=='ocupada') {
+            echo('<option value="ocupada" selected>Ocupada</option>
+            <option value="Disponible">Disponible</option>');
+           }
+       @endphp
+
+    </select>
+
+</div>
 
 <button type="button" id="enviarr" class="my-3 w-full bg-blue-600 p-2 font-semibold
 rounded text-white hover:bg-blue-400">Actualizar</button>
